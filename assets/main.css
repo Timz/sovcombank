@@ -1,0 +1,112 @@
+body {
+    background-color: #f8f4f4;
+}
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    color: dimgray;
+
+}
+
+.header {
+    padding: 1em;
+    display: flex;
+    flex-grow: 1;
+    /*height: 64px;*/
+    background: #6ec0fb;
+    color: #fff;
+
+}
+
+.header a {
+    color: white;
+    font-weight: bold;
+}
+
+.logo {
+    flex-grow: 11;
+}
+
+.menu {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.container {
+    margin-top: 1em;
+}
+
+.container > div {
+    display: flex;
+}
+
+.left-col {
+    background-color: #efefef;
+    flex-grow: 1;
+    padding: 1em 2em 1em 1em;
+    margin-right: 1em;
+    max-width: 150px;
+}
+
+.right-col {
+    font-size: 1.2em;
+    flex-grow: 11;
+}
+
+.left-col > input {
+    width: 100%;
+    border: 1px solid #b1ddfc;
+    color: #353535;
+    padding: 0.3em 0.5em;
+    background: #FFF;
+    font-size: 1em;
+}
+
+.list-group {
+    /*background-color: #42b983;*/
+}
+
+.list-group-item {
+    padding: 0.5em;
+    margin-bottom: 0.5em;
+    background-color: #fff;
+    display: flex;
+}
+.list-group-item > div {
+    display: flex;
+    width: 100%;
+}
+
+.title-item {
+    display: flex;
+    flex: 1;
+    padding-left: 0.2em;
+    white-space: nowrap;
+}
+
+.title-item >i {
+    padding-right: 0.3em;
+}
+.descr-item {
+    display: flex;
+    max-width: 75%;
+    flex: 11;
+    padding-left: 1em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.hide-full {
+    max-height: 1em;
+}
+
+.title-item > span {
+
+
+}

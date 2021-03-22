@@ -1,28 +1,33 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="header">
+      <div class="logo">Word Keeper</div>
+      <div class="menu"><a href="#" v-on:click="showFav=!showFav">{{ showFav ? 'Поиск' : 'В избранное' }}</a></div>
+    </div>
+    <div class="container">
+      <pg-search v-if="showFav===false"></pg-search>
+      <pg-favorites v-if="showFav===true"></pg-favorites>
+    </div>
+
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import PgFavorites from "@/components/pgFavorites";
+import PgSearch from "@/components/pgSearch";
+import "/assets/main.css"
+import "@fortawesome/fontawesome-free/css/all.min.css"
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    PgSearch,
+    PgFavorites
+  },
+  data: function () {
+    return {
+      showFav: false
+    }
+  },
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
